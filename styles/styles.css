@@ -7,6 +7,7 @@
     --color-gray: #b4b4b4;
     --color-orange: #ff5f33;
     --color-light-orange: #ff8133;
+    --color-transparent-light-orange: #ff81339a;
 
     --border-radius: 30px;
     --border-radius-medium: 10px;
@@ -448,7 +449,7 @@ p {
 }
 
 .button:hover {
-    box-shadow: 2px 0px 25px var(--color-light-orange);
+    box-shadow: 1px 0px 25px var(--color-transparent-light-orange);
     transition: var(--transition-duration);
 }
 
@@ -723,6 +724,13 @@ tbody td:first-child {
 
 .contact-form button {
     align-self: center;
+    color: white;
+    background-color: var(--color-orange);
+}
+
+.contact-form button:hover {
+    color: var(--color-orange);
+    background-color: white;
 }
 
 @media (min-width: 1920px) {
