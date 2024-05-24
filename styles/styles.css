@@ -667,9 +667,9 @@ td:last-child {
     border-bottom-right-radius: var(--border-radius-medium);
 }
 
-/* tbody tr:nth-child(even) {
+tbody tr:nth-child(even) {
     background-color: #ffede2b6;
-} */
+}
 
 .table__wrapper {
     overflow-x: auto;
@@ -736,11 +736,11 @@ th:last-child, td:last-child {
     display: none;
 } */
 
-.contact-form__wrapper {
+/* .contact-form__wrapper {
     display: flex;
     background-color: var(--color-light-orange);
     border-radius: var(--border-radius-medium);
-}
+} */
 
 .contact-form__header {
     width: 50%;
@@ -754,6 +754,7 @@ th:last-child, td:last-child {
     justify-content: center;
     margin: 0 auto;
     background-color: white;
+    border-radius: var(--border-radius-medium);
 }
 
 .contact-form p {
