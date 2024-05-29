@@ -361,6 +361,11 @@ p {
     font-weight: 400;
 }
 
+a {
+    font-size: clamp(16px, 1.2vw, 20px);
+    font-weight: 400;
+}
+
 .section-paddings {
     padding: min(4%, 3rem) min(4%, 4rem);
 }
@@ -785,8 +790,12 @@ th:last-child, td:last-child {
 }
 
 .contact-form p {
-    margin-bottom: 20px;
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-form a {
+    margin-bottom: 30px;
 }
 
 .contact-form label {
@@ -824,7 +833,7 @@ th:last-child, td:last-child {
     justify-content: center;
     margin-top: 4%;
     gap: 20px;
-    /* row-gap: 10px; */
+    row-gap: 40px;
     flex-wrap: wrap;
 }
 
