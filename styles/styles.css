@@ -418,6 +418,17 @@ p {
     height: fit-content;
 }
 
+.mission {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission-video__wrapper {
+    display: flex;
+    gap: 40px;
+}
+
 .mission__wrapper {
     display: flex;
     flex-direction: column;
@@ -723,13 +734,14 @@ th:last-child, td:last-child {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-top: 20px;
 }
 
 .donate__qr {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 15%;
+    width: 15rem;
     gap: 10px;
 }
 
@@ -861,16 +873,16 @@ th:last-child, td:last-child {
         flex-direction: column;
     }
 
-    .our-mission-mob {
-        display: block;
-    }
-
     .mission {
         gap: 10px;
     }
 
     .mission__wrapper h3 {
         display: none;
+    }
+
+    .mission-video__wrapper {
+        flex-direction: column;
     }
 
     .mission__wrapper {
