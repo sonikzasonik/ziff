@@ -654,6 +654,10 @@ th {
     font-size: var(--font-title-medium);
 }
 
+thead th {
+    min-width: 220px;
+}
+
 thead th img {
     width: 25%;
     margin: 0 auto;
@@ -661,6 +665,7 @@ thead th img {
 
 thead tr:first-child th:first-child {
     border-top-left-radius: var(--border-radius-medium);
+    min-width: 150px;
 }
 
 thead tr:first-child th:last-child {
@@ -818,7 +823,9 @@ th:last-child, td:last-child {
     display: flex;
     justify-content: center;
     margin-top: 4%;
-    gap: 30px;
+    gap: 20px;
+    /* row-gap: 10px; */
+    flex-wrap: wrap;
 }
 
 .advisers-card {
@@ -994,7 +1001,7 @@ th:last-child, td:last-child {
     }
 
     thead th img {
-        width: 85%;
+        width: 60%;
     }
 
     th {
