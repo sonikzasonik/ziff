@@ -777,6 +777,35 @@ th:last-child, td:last-child {
     margin-bottom: 5px;
 }
 
+.roadmap-card__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    gap: 20px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.roadmap-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+}
+
+/* .roadmap-card img {
+    align-self: center;
+    width: 100%;
+    border-radius: 100%;
+    margin-bottom: 30px;
+} */
+
+.roadmap-card p:first-child {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
 @media (min-width: 1920px) {
     footer {
         padding: 4% 0 2% 0;
