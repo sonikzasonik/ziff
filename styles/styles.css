@@ -782,8 +782,8 @@ th:last-child, td:last-child {
     justify-content: center;
     margin-top: 4%;
     gap: 20px;
-    row-gap: 40px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .roadmap-card {
@@ -791,7 +791,53 @@ th:last-child, td:last-child {
     flex-direction: column;
     text-align: center;
     width: 15%;
+    position: relative;
 }
+
+.roadmap-card p:first-child {
+    font-weight: 700;
+    margin-bottom: 5px;
+    min-width: 170px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-light-orange);
+    border-radius: 50%;
+    margin: 10px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.circle::before,
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1.5px;
+    background-color: var(--color-light-orange);
+    width: 560%;
+}
+
+.circle::before {
+    right: 100%;
+    margin-right: 10px; /* Отступ от круга */
+}
+
+.circle::after {
+    left: 100%;
+    margin-left: 10px; /* Отступ от круга */
+}
+
+.roadmap-card:first-child .circle::before {
+    width: 450%;
+}
+
+.roadmap-card:last-child .circle::after {
+    width: 450%;
+}
+
 
 /* .roadmap-card img {
     align-self: center;
@@ -799,12 +845,6 @@ th:last-child, td:last-child {
     border-radius: 100%;
     margin-bottom: 30px;
 } */
-
-.roadmap-card p:first-child {
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
 
 @media (min-width: 1920px) {
     footer {
@@ -964,4 +1004,43 @@ th:last-child, td:last-child {
     th {
         padding: 25px;
     }
+
+    .roadmap-card__wrapper {
+        flex-direction: column;
+        gap: 80px;
+        margin-top: 8%;
+    }
+
+    .roadmap-card {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .circle {
+        margin-bottom: 10px;
+        order: -1;
+    }
+
+    .circle::before {
+        top: calc(-440% + 20px);
+        height: calc(130% + 20px);
+        width: 1.5px;
+        right: -1.5px;
+    }
+
+    .circle::after {
+        display: none;
+    }
+
+    .roadmap-card p:first-child {
+        margin-top: 0;
+    }
+
+    .roadmap-card:first-child .circle::before,
+    .roadmap-card:first-child .circle {
+        display: none;
+    }
+
 }
