@@ -858,6 +858,12 @@ th:last-child, td:last-child {
 
 }
 
+@media (max-width: 1200px) {
+    .roadmap-card:last-child .circle::after {
+        width: 560%;
+    }
+}
+
 @media (max-width: 960px) {
     .features__wrapper {
         flex-direction: column;
