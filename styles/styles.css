@@ -15,6 +15,7 @@
     --border-radius: 30px;
     --border-radius-medium: 12px;
     --border-radius-small: 2px;
+    --border-orange: 1.5px solid #ff8133;
     --border: 1px solid #b4b4b4;
     --orange-border: 1px solid var(--color-light-orange);
     --button-padding: 0.61em 1.6em 0.6em 1.6em;
@@ -790,8 +791,9 @@ th:last-child, td:last-child {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 15%;
+    width: 18%;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .roadmap-card p:first-child {
@@ -801,13 +803,19 @@ th:last-child, td:last-child {
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
+    max-width: 170px;
     background-color: var(--color-light-orange);
     border-radius: 50%;
-    margin: 10px auto;
+    margin: 20px auto;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+}
+
+.circle img {
+    border-radius: 50%;
+    /* box-shadow: 1px 0px 15px var(--color-gray); */
+    border: var(--border-orange);
+    z-index: 10;
 }
 
 .circle::before,
@@ -817,25 +825,28 @@ th:last-child, td:last-child {
     top: 50%;
     height: 1.5px;
     background-color: var(--color-light-orange);
-    width: 560%;
+    width: 38%;
+    z-index: 1;
 }
 
 .circle::before {
     right: 100%;
-    margin-right: 10px; /* Отступ от круга */
+    margin-right: 10px;
 }
 
 .circle::after {
     left: 100%;
-    margin-left: 10px; /* Отступ от круга */
+    margin-left: 10px;
 }
 
 .roadmap-card:first-child .circle::before {
-    width: 450%;
+    /* width: 450%; */
+    display: none;
 }
 
 .roadmap-card:last-child .circle::after {
-    width: 450%;
+    display: none;
+    /* width: 450%; */
 }
 
 
@@ -845,6 +856,24 @@ th:last-child, td:last-child {
     border-radius: 100%;
     margin-bottom: 30px;
 } */
+
+@media (max-width: 1420px) {
+
+    .circle::before,
+    .circle::after {
+        width: 20%;
+    }
+
+}
+
+@media (max-width: 1170px) {
+
+    .circle::before,
+    .circle::after {
+        width: 7%;
+    }
+
+}
 
 @media (min-width: 1920px) {
     footer {
@@ -1025,15 +1054,16 @@ th:last-child, td:last-child {
     }
 
     .circle {
-        margin-bottom: 10px;
-        order: -1;
+        margin: 10px;
+        /* order: -1; */
     }
 
     .circle::before {
-        top: calc(-440% + 20px);
-        height: calc(130% + 20px);
+        top: calc(-75% + 20px);
+        height: calc(20% + 20px);
         width: 1.5px;
-        right: -1.5px;
+        right:unset;
+        /* display: none; */
     }
 
     .circle::after {
@@ -1044,8 +1074,7 @@ th:last-child, td:last-child {
         margin-top: 0;
     }
 
-    .roadmap-card:first-child .circle::before,
-    .roadmap-card:first-child .circle {
+    .roadmap-card:first-child .circle::before  {
         display: none;
     }
 
